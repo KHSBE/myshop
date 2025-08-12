@@ -109,11 +109,12 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- (그대로 둠) 중복 JPA 스타터 -->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
+
 
         <!-- javax 패키지의 JPA API (Boot 2.x 용) -->
         <dependency>
@@ -128,6 +129,8 @@
             <artifactId>javax.annotation-api</artifactId>
             <version>1.3.2</version>
         </dependency>
+
+
     </dependencies>
 
     <build>
@@ -165,17 +168,6 @@
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
                             <version>${lombok.version}</version>
-                        </path>
-                        <!-- ✅ 추가: APT 경로에 JPA/Annotation API 포함 -->
-                        <path>
-                            <groupId>jakarta.persistence</groupId>
-                            <artifactId>jakarta.persistence-api</artifactId>
-                            <version>2.2.3</version>
-                        </path>
-                        <path>
-                            <groupId>javax.annotation</groupId>
-                            <artifactId>javax.annotation-api</artifactId>
-                            <version>1.3.2</version>
                         </path>
                     </annotationProcessorPaths>
                 </configuration>
